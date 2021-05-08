@@ -1,23 +1,20 @@
 const foldApp = {};
 
 foldApp.element = document.getElementById("landingImage");
-foldApp.openText = document.querySelector(".open");
+foldApp.openText = document.querySelector(".background");
 
 foldApp.startingPosition = () => {
   const folded = new OriDomi(foldApp.element, {
     vPanels: 10,
   });
-  folded.accordion(75).wait(1200).setSpeed(2000).unfold();
-};
 
-foldApp.hideOpenText = () => {
-  const folded = document.querySelector(".oridomi-panel oridomi-panel-v");
-  console.log(folded);
+  folded.accordion(70, function () {
+    foldApp.openText.style.display = "flex";
+  });
 };
 
 foldApp.init = () => {
   foldApp.startingPosition();
-  foldApp.hideOpenText();
 };
 
 foldApp.init();

@@ -112,6 +112,12 @@ button:-moz-focusring,
 .oridomi-mask .oridomi-mask-v {
   z-index: 10;
 }
+section {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
 .container {
   display: flex;
   flex-direction: row;
@@ -120,20 +126,27 @@ button:-moz-focusring,
   position: relative;
 }
 .background {
-  z-index: 1;
+  z-index: -1;
   color: #fff;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.background img {
+  padding-right: 30px;
 }
 .landingImage {
   z-index: 10;
   object-fit: cover;
   width: 97vw;
   height: 94.5vh;
+  border: 15px solid #fff;
 }
-
 .landingHeadlineContainer {
   z-index: 10;
   position: absolute;
@@ -180,6 +193,7 @@ footer {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  padding: 0 30px;
 }
 .footerText p,
 .footerText a {
